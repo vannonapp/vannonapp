@@ -1,0 +1,8 @@
+para remover o botão de ofertas vá até /node_modules/react-native-paper/src/components/BottomNavigation.tsx
+
+e altere renderTouchable para 
+renderTouchable = (props: TouchableProps) => {
+        //console.log("thatProps: ", )
+        if(props.route?.name !== "Catalog")
+          return <Touchable {...props} />
+      }
